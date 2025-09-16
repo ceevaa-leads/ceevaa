@@ -4,10 +4,9 @@
 import * as React from "react";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { motion } from "motion/react";
-// import ceeVaaLogo from "figma:asset/b258097cb16673440fd50c9087b7fbbff4691321.png";
+import ceeVaaLogo from "../../icon.png";
 
-
-const ceeVaaLogo = "https://via.placeholder.com/32x32/ea580c/ffffff?text=C";
+import Image from "next/image";
 
 
 export function Footer() {
@@ -44,13 +43,7 @@ export function Footer() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <div className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <motion.img
-                                src={ceeVaaLogo}
-                                alt="CeeVaa Logo"
-                                className="w-12 h-12"
-                                whileHover={{ rotate: 360 }}
-                                transition={{ duration: 0.6 }}
-                            />
+                            <Image src={ceeVaaLogo.src} alt="CeeVaa Logo" className="w-12 h-12" />
                         </div>
                         <span className="text-2xl text-slate-900 font-semibold">
                             CeeVaa

@@ -1,14 +1,14 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { Navigation } from "./components/ui/Navigation";
-import { HeroSection } from "./components/ui/HeroSection";
-import { FeaturesSection } from "./components/ui/FeaturesSection";
-import { HowItWorksSection } from "./components/ui/HowItWorksSection";
-import { WhoWeServeSection } from "./components/ui/WhoWeServeSection";
-import { ComparisonSection } from "./components/ui/ComparisonSection";
-import { FinalCTASection } from "./components/ui/FinalCTASection";
-import { Footer } from "./components/ui/Footer";
+import { Navigation } from "./components/sections/Navigation";
+import { HeroSection } from "./components/sections/Hero";
+import { FeaturesSection } from "./components/sections/Features";
+import { HowItWorksSection } from "./components/sections/HowItWorks";
+import { WhoWeServeSection } from "./components/sections/WhoWeServe";
+import { ComparisonSection } from "./components/sections/Comparison";
+import { FinalCTASection } from "./components/sections/FinalCTA";
+import { Footer } from "./components/sections/Footer";
 
 import "./globals.css";
 

@@ -2,8 +2,8 @@
 
 
 import * as React from "react";
-import { Button } from "./Button";
-import { Badge } from "./Badge";
+import { Button } from "../atoms/Button";
+import { Badge } from "../atoms/Badge";
 import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -41,7 +41,7 @@ export function FinalCTASection() {
                     viewport={{ once: true }}
                 >
                     Your next customer is already{" "}
-                    <em className=" text-white">searching</em>.
+                    <span className=" text-white">searching</span>.
                 </motion.h2>
 
                 <motion.p

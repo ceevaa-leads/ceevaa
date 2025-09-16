@@ -8,7 +8,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "CeeVaa - Lead Generation for Service Businesses",
+  title: "CeeVaa - Lead Generation for Service SMBs",
   description: "Exclusive, AI-verified leads for HVAC, Cleaning, and Landscaping service businesses.",
 };
 

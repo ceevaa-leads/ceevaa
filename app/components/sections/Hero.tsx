@@ -2,8 +2,8 @@
 
 
 import * as React from "react";
-import { Button } from "./Button";
-import { Badge } from "./Badge";
+import { Button } from "../atoms/Button";
+import { Badge } from "../atoms/Badge";
 import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -38,14 +38,14 @@ export function HeroSection() {
                 >
                     The Growth Engine for
                     <br />
-                    <motion.em
+                    <motion.h1
                         className=" text-slate-900 tracking-wide"
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
                     >
                         Service SMBs
-                    </motion.em>
+                    </motion.h1>
                 </motion.h1>
 
                 <motion.p

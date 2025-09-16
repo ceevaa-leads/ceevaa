@@ -1,8 +1,8 @@
 'use client'
 
 import * as React from "react";
-import { Button } from "./Button";
-import { Badge } from "./Badge";
+import { Button } from "../atoms/Button";
+import { Badge } from "../atoms/Badge";
 import { Settings, Target, BarChart3, Zap, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -32,9 +32,9 @@ export function FeaturesSection() {
                     </Badge>
                     <h2 className="text-3xl md:text-4xl text-slate-900 mb-6 leading-[1.2]">
                         More Than Software — Your{" "}
-                        <em className=" text-slate-900 underline decoration-orange-600 wavy-underline underline-offset-4">
+                        <span className=" text-slate-900 underline decoration-orange-600 wavy-underline underline-offset-4">
                             Growth Partner
-                        </em>
+                        </span>
                     </h2>
                     <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
                         We handle the complexity of lead generation so you

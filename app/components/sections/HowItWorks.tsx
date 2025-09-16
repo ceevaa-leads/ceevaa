@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from "react";
-import { Badge } from "./Badge";
+import { Badge } from "../atoms/Badge";
 import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -85,7 +85,7 @@ export function HowItWorksSection({ activeProcessTab, tabProgress, handleTabClic
                     </Badge>
                     <h2 className="text-3xl md:text-4xl text-slate-900 mb-6 leading-[1.2]">
                         How It{" "}
-                        <em className=" text-slate-900">Works</em>
+                        <span className=" text-slate-900">Works</span>
                     </h2>
                     <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                         From initial strategy to measurable results —

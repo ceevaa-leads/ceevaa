@@ -1,12 +1,12 @@
 'use client'
 
 import * as React from "react";
-import { Button } from "./Button";
+import { Button } from "../atoms/Button";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion } from "motion/react";
-// import ceeVaaLogo from "figma:asset/b258097cb16673440fd50c9087b7fbbff4691321.png";
+import ceeVaaLogo from "../../icon.png";
 
-const ceeVaaLogo = "https://via.placeholder.com/32x32/ea580c/ffffff?text=C";
+import Image from "next/image";
 
 interface NavigationProps {
     mobileMenuOpen: boolean;
@@ -43,13 +43,7 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                             whileTap={{ scale: 0.95 }}
                         >
                             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                                <motion.img
-                                    src={ceeVaaLogo}
-                                    alt="CeeVaa Logo"
-                                    className="w-8 h-8"
-                                    whileHover={{ rotate: 360 }}
-                                    transition={{ duration: 0.6 }}
-                                />
+                                <Image src={ceeVaaLogo.src} alt="CeeVaa Logo" className="w-8 h-8" />
                             </div>
                             <span className="text-xl text-slate-900 font-semibold">
                                 CeeVaa
@@ -109,13 +103,7 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
                             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                                <motion.img
-                                    src={ceeVaaLogo}
-                                    alt="CeeVaa Logo"
-                                    className="w-8 h-8"
-                                    whileHover={{ rotate: 360 }}
-                                    transition={{ duration: 0.6 }}
-                                />
+                                <Image src={ceeVaaLogo.src} alt="CeeVaa Logo" className="w-8 h-8" />
                             </div>
                             <span className="text-xl text-slate-900 font-semibold">
                                 CeeVaa

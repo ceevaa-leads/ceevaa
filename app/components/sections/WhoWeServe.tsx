@@ -2,10 +2,10 @@
 
 
 import * as React from "react";
-import { Badge } from "./Badge";
+import { Badge } from "../atoms/Badge";
 import { CheckCircle, Wrench, Sparkles, Leaf } from "lucide-react";
 import { motion } from "motion/react";
-import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { ImageWithFallback } from "../atoms/ImageWithFallback";
 
 interface WhoWeServeSectionProps {
     activeServiceTab: number;
@@ -80,7 +80,7 @@ export function WhoWeServeSection({ activeServiceTab, setActiveServiceTab }: Who
                     </Badge>
                     <h2 className="text-3xl md:text-4xl text-slate-900 mb-6 leading-[1.2]">
                         Who We{" "}
-                        <em className=" text-slate-900">Serve</em>
+                        <span className=" text-slate-900">Serve</span>
                     </h2>
                     <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
                         Perfect for small business owners who want
