@@ -10,7 +10,7 @@ import { motion } from "motion/react";
 export function ComparisonSection() {
     const comparisons = [
         {
-            title: "Approach",
+            title: "Test Approach",
             others: [
                 "Shared leads sold to multiple competitors",
                 "Generic, one-size-fits-all campaigns",
