@@ -22,9 +22,12 @@ export const navigationContent = {
     { href: "#features", label: "Features" },
     { href: "#how-it-works", label: "How It Works" },
     { href: "#services", label: "Services" },
-    { href: "#pricing", label: "Pricing" }
+    // { href: "#comparison", label: "Why Us" },
   ],
-  cta: "Get Started"
+  cta: [
+    { type: "primary", label: "Get Started" },
+    { type: "secondary", label: "Book a Demo" }
+  ]
 };
 
 export const featuresContent = {
@@ -251,32 +254,39 @@ export const finalCTAContent = {
 export const footerContent = {
   company: {
     name: "CeeVaa",
-    description: "The leading lead generation platform for service businesses. Get exclusive, AI-verified leads that convert."
+    description:
+      "A powerful, customizable lead generation platform designed to help service teams capture, track, and convert leads with ease. From smart automation to real-time insights.",
   },
+  socialLinks: [
+    { name: "Facebook", href: "#", icon: "Facebook" },
+    { name: "Instagram", href: "#", icon: "Instagram" },
+    { name: "LinkedIn", href: "#", icon: "Linkedin" },
+    { name: "Twitter", href: "#", icon: "Twitter" },
+  ],
   links: {
     product: [
       { label: "Features", href: "#features" },
       { label: "How It Works", href: "#how-it-works" },
       { label: "Pricing", href: "#pricing" },
-      { label: "Case Studies", href: "#case-studies" }
+      { label: "Case Studies", href: "#case-studies" },
     ],
     company: [
       { label: "About Us", href: "#about" },
       { label: "Contact", href: "#contact" },
       { label: "Blog", href: "#blog" },
-      { label: "Careers", href: "#careers" }
+      { label: "Careers", href: "#careers" },
     ],
     support: [
       { label: "Help Center", href: "#help" },
       { label: "Documentation", href: "#docs" },
       { label: "API Reference", href: "#api" },
-      { label: "System Status", href: "#status" }
+      { label: "System Status", href: "#status" },
     ],
     legal: [
       { label: "Privacy Policy", href: "#privacy" },
       { label: "Terms of Service", href: "#terms" },
-      { label: "Cookie Policy", href: "#cookies" }
-    ]
+      { label: "Cookie Policy", href: "#cookies" },
+    ],
   },
-  copyright: "© 2024 CeeVaa. All rights reserved."
+  copyright: "© 2025 CeeVaa. All rights reserved.",
 };

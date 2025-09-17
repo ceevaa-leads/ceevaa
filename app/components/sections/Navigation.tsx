@@ -1,12 +1,11 @@
 'use client'
 
 import * as React from "react";
-import { Button } from "../atoms/Button";
+import { Button } from "@/app/components/atoms/Button";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion } from "motion/react";
-import ceeVaaLogo from "../../icon.png";
-
-import Image from "next/image";
+import ceeVaaLogo from "@/app/icon.png";
+import { navigationContent } from "@/app/data/content";
 
 interface NavigationProps {
     mobileMenuOpen: boolean;
@@ -43,53 +42,55 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                             whileTap={{ scale: 0.95 }}
                         >
                             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                                <Image src={ceeVaaLogo.src} alt="CeeVaa Logo" className="w-8 h-8" />
+                                <motion.img
+                                    src={ceeVaaLogo.src}
+                                    alt="CeeVaa Logo"
+                                    className="w-8 h-8"
+                                    whileHover={{ rotate: 360 }}
+                                    transition={{ duration: 0.6 }}
+                                />
                             </div>
                             <span className="text-xl text-slate-900 font-semibold">
-                                CeeVaa
+                                {navigationContent.logo}
                             </span>
                         </motion.button>
 
                         {/* Center Navigation Links */}
                         <div className="flex items-center space-x-1">
-                            <motion.a
-                                href="#features"
-                                className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-white hover:shadow-sm"
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                Features
-                            </motion.a>
-                            <motion.a
-                                href="#how-it-works"
-                                className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-white hover:shadow-sm"
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                How it works
-                            </motion.a>
-                            <motion.a
-                                href="#services"
-                                className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-white hover:shadow-sm"
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                Who we serve
-                            </motion.a>
+                            {navigationContent.links.map((link, index) => (
+                                <motion.a
+                                    key={link.href}
+                                    href={link.href}
+                                    className="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-white hover:shadow-sm"
+                                    whileHover={{ scale: 1.05 }}
+                                >
+                                    {link.label}
+                                </motion.a>
+                            ))}
                         </div>
 
                         {/* CTA Buttons */}
                         <div className="flex items-center space-x-1.5 px-1 p-[0px]">
-                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-6 h-10 rounded-lg shadow-sm transition-all hover:shadow-md cursor-pointer">
-                                    Get Started
-                                </Button>
-                            </motion.div>
-                            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                                <Button
-                                    variant="outline"
-                                    className="text-slate-600 hover:text-slate-900 px-6 h-10 border-slate-300 rounded-lg cursor-pointer"
+                            {navigationContent.cta.map((cta, index) => (
+                                <motion.div
+                                    key={cta.label}
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
                                 >
-                                    Book a demo
-                                </Button>
-                            </motion.div>
+                                    <Button
+                                        className={
+                                            cta.type === "primary"
+                                                ? "bg-orange-600 hover:bg-orange-700 text-white px-6 h-10 rounded-lg shadow-sm transition-all hover:shadow-md cursor-pointer"
+                                                : cta.type === "secondary"
+                                                    ? "text-slate-600 hover:text-slate-900 px-6 h-10 border-slate-300 rounded-lg cursor-pointer"
+                                                    : "text-slate-600 hover:text-orange-600 px-6 h-10 rounded-lg cursor-pointer" // tertiary style
+                                        }
+                                        variant={cta.type === "primary" ? "default" : cta.type === "secondary" ? "outline" : "ghost"}
+                                    >
+                                        {cta.label}
+                                    </Button>
+                                </motion.div>
+                            ))}
                         </div>
                     </motion.div>
 
@@ -103,10 +104,16 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
                             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                                <Image src={ceeVaaLogo.src} alt="CeeVaa Logo" className="w-8 h-8" />
+                                <motion.img
+                                    src={ceeVaaLogo.src}
+                                    alt="CeeVaa Logo"
+                                    className="w-8 h-8"
+                                    whileHover={{ rotate: 360 }}
+                                    transition={{ duration: 0.6 }}
+                                />
                             </div>
                             <span className="text-xl text-slate-900 font-semibold">
-                                CeeVaa
+                                {navigationContent.logo}
                             </span>
                         </div>
 
@@ -144,36 +151,33 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.3, delay: 0.1 }}
                     >
-                        <a
-                            href="#features"
-                            className="block text-slate-700 hover:text-slate-900 py-3 px-2 rounded-lg hover:bg-slate-50 transition-colors font-medium"
-                        >
-                            Features
-                        </a>
-                        <a
-                            href="#how-it-works"
-                            className="block text-slate-700 hover:text-slate-900 py-3 px-2 rounded-lg hover:bg-slate-50 transition-colors font-medium"
-                        >
-                            How it works
-                        </a>
-                        <a
-                            href="#services"
-                            className="block text-slate-700 hover:text-slate-900 py-3 px-2 rounded-lg hover:bg-slate-50 transition-colors font-medium"
-                        >
-                            Who we serve
-                        </a>
+                        {navigationContent.links.map((link) => (
+                            <a
+                                key={link.href}
+                                href={link.href}
+                                className="block text-slate-700 hover:text-slate-900 py-3 px-2 rounded-lg hover:bg-slate-50 transition-colors font-medium"
+                            >
+                                {link.label}
+                            </a>
+                        ))}
 
                         <div className="pt-4 border-t border-slate-100 mt-4 space-y-2">
-                            <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white h-12 rounded-lg flex items-center justify-center shadow-sm px-6 cursor-pointer">
-                                Get Started
-                            </Button>
-                            <Button
-                                variant="outline"
-                                className="w-full justify-center px-6 h-12 text-slate-600 hover:text-slate-900 border-slate-300 rounded-lg cursor-pointer"
-                            >
-                                Book a demo
-                                <ArrowRight className="w-4 h-4 ml-2" />
-                            </Button>
+                            {navigationContent.cta.map((cta, index) => (
+                                <Button
+                                    key={cta.label}
+                                    className={
+                                        cta.type === "primary"
+                                            ? "w-full bg-orange-600 hover:bg-orange-700 text-white h-12 rounded-lg flex items-center justify-center shadow-sm px-6 cursor-pointer"
+                                            : cta.type === "secondary"
+                                                ? "w-full justify-center px-6 h-12 text-slate-600 hover:text-slate-900 border-slate-300 rounded-lg cursor-pointer"
+                                                : "w-full justify-center px-6 h-12 text-slate-600 hover:text-orange-600 rounded-lg cursor-pointer" // tertiary style
+                                    }
+                                    variant={cta.type === "primary" ? "default" : cta.type === "secondary" ? "outline" : "ghost"}
+                                >
+                                    {cta.label}
+                                    {cta.type === "secondary" && <ArrowRight className="w-4 h-4 ml-2" />}
+                                </Button>
+                            ))}
                         </div>
                     </motion.div>
                 </motion.div>

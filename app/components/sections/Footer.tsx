@@ -1,22 +1,21 @@
 'use client'
 
-
-import * as React from "react";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { motion } from "motion/react";
-import ceeVaaLogo from "../../icon.png";
+import ceeVaaLogo from "@/app/icon.png";
+import { footerContent } from "@/app/data/content";
 
-import Image from "next/image";
+
+// Icon mapping helper
+const iconMap = {
+    Facebook,
+    Instagram,
+    Linkedin,
+    Twitter
+};
 
 
 export function Footer() {
-    const socialLinks = [
-        { icon: Facebook, href: "#" },
-        { icon: Instagram, href: "#" },
-        { icon: Linkedin, href: "#" },
-        { icon: Twitter, href: "#" }
-    ];
-
     return (
         <motion.footer
             className="bg-slate-50 py-20 md:py-28"
@@ -43,19 +42,22 @@ export function Footer() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <div className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <Image src={ceeVaaLogo.src} alt="CeeVaa Logo" className="w-12 h-12" />
+                            <motion.img
+                                src={ceeVaaLogo.src}
+                                alt="CeeVaa Logo"
+                                className="w-12 h-12"
+                                whileHover={{ rotate: 360 }}
+                                transition={{ duration: 0.6 }}
+                            />
                         </div>
                         <span className="text-2xl text-slate-900 font-semibold">
-                            CeeVaa
+                            {footerContent.company.name}
                         </span>
                     </motion.button>
 
                     {/* Description */}
                     <p className="text-lg text-slate-600 leading-relaxed mb-12 max-w-2xl mx-auto">
-                        A powerful, customizable lead generation platform
-                        designed to help service teams capture, track, and
-                        convert leads with ease. From smart automation to
-                        real-time insights.
+                        {footerContent.company.description}
                     </p>
 
                     {/* Social Icons */}
@@ -66,20 +68,23 @@ export function Footer() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        {socialLinks.map(({ icon: Icon, href }, i) => (
-                            <motion.a
-                                key={i}
-                                href={href}
-                                className="group w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-500 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all duration-300 shadow-sm hover:shadow-lg hover:scale-110"
-                                whileHover={{ y: -2 }}
-                                initial={{ scale: 0.8, opacity: 0 }}
-                                whileInView={{ scale: 1, opacity: 1 }}
-                                transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                                viewport={{ once: true }}
-                            >
-                                <Icon className="w-5 h-5" />
-                            </motion.a>
-                        ))}
+                        {footerContent.socialLinks.map((social, i) => {
+                            const IconComponent = iconMap[social.icon as keyof typeof iconMap];
+                            return (
+                                <motion.a
+                                    key={i}
+                                    href={social.href}
+                                    className="group w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-500 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all duration-300 shadow-sm hover:shadow-lg hover:scale-110"
+                                    whileHover={{ y: -2 }}
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    whileInView={{ scale: 1, opacity: 1 }}
+                                    transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <IconComponent className="w-5 h-5" />
+                                </motion.a>
+                            );
+                        })}
                     </motion.div>
 
                     {/* Decorative divider */}
@@ -101,7 +106,7 @@ export function Footer() {
                     viewport={{ once: true }}
                 >
                     <p className="text-slate-500 text-sm">
-                        © 2025 CeeVaa. All Rights Reserved.
+                        {footerContent.copyright}
                     </p>
                 </motion.div>
             </div>

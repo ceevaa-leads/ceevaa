@@ -12,7 +12,6 @@ import { Footer } from "./components/sections/Footer";
 
 import "./globals.css";
 
-
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeServiceTab, setActiveServiceTab] = useState(0);
