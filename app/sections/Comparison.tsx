@@ -1,7 +1,7 @@
 'use client'
 
-import { Button, Badge } from "@/app/components";
-import { ArrowRight, Check, X as XIcon } from "lucide-react";
+import { Badge } from "@/app/components";
+import { Check, X as XIcon } from "lucide-react";
 import { motion } from "motion/react";
 import { comparisonContent } from "@/app/content";
 
@@ -149,25 +149,6 @@ export function ComparisonSection() {
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
-
-                {/* Bottom CTA */}
-                <motion.div
-                    className="text-center mt-12"
-                    initial={{ y: 30, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    viewport={{ once: true }}
-                >
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button
-                            variant="outline"
-                            className="border-sky-700 text-sky-700 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-700 px-8 h-12 rounded-lg cursor-pointer"
-                        >
-                            {comparisonContent.cta}
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
-                    </motion.div>
                 </motion.div>
             </div>
         </motion.section>

@@ -5,7 +5,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import ceeVaaLogo from "@/app/icon.png";
 import { navigationContent } from "@/app/content";
-import { BookDemoForm } from "./BookDemoForm";
+import { BookDemoForm } from "@/app/sections/BookDemoForm";
 
 interface NavigationProps {
     mobileMenuOpen: boolean;
@@ -24,7 +24,7 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                 <div className="flex justify-center items-center">
                     {/* Main Navigation Container - Pill with Logo, Links, and CTAs */}
                     <motion.div
-                        className="hidden lg:flex items-center justify-between bg-slate-50/80 backdrop-blur-sm rounded-2xl border border-slate-200/50 w-full max-w-4xl px-[8px] py-[6px] pt-[8px] pr-[4px] pb-[8px] pl-[12px]"
+                        className="hidden lg:flex items-center justify-between backdrop-blur-sm rounded-2xl border border-slate-200/50 w-full max-w-4xl px-2 py-[6px] pt-2 pr-1 pb-2 pl-3"
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,20 +37,16 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                                     behavior: "smooth",
                                 })
                             }
-                            className="flex items-center space-x-2 px-3 hover:opacity-80 transition-opacity cursor-pointer"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center space-x-2 px-3 transition-opacity cursor-pointer"
                         >
-                            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                            <div className="w-10 h-10 rounded-lg flex items-center justify-center">
                                 <motion.img
                                     src={ceeVaaLogo.src}
                                     alt="CeeVaa Logo"
-                                    className="w-8 h-8"
-                                    whileHover={{ rotate: 360 }}
-                                    transition={{ duration: 0.6 }}
+                                    className="w-10 h-10"
                                 />
                             </div>
-                            <span className="text-xl text-slate-900 font-semibold">
+                            <span className="text-xl text-sky-900 font-bold">
                                 {navigationContent.logo}
                             </span>
                         </motion.button>
@@ -113,7 +109,7 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                                     transition={{ duration: 0.6 }}
                                 />
                             </div>
-                            <span className="text-xl text-slate-900 font-semibold">
+                            <span className="text-xl text-sky-900 font-bold">
                                 {navigationContent.logo}
                             </span>
                         </div>

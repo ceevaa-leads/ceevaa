@@ -5,7 +5,7 @@ import { Button, Badge } from "@/app/components";
 import { CheckCircle } from "lucide-react";
 import { heroContent } from "@/app/content";
 import { motion } from "motion/react";
-import { BookDemoForm } from "./BookDemoForm";
+import { BookDemoForm } from "@/app/sections/BookDemoForm";
 
 export function HeroSection() {
     return (

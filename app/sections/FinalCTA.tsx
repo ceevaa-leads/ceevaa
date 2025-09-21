@@ -4,6 +4,7 @@ import { Button, Badge } from "@/app/components";
 import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 import { finalCTAContent } from "@/app/content";
+import { BookDemoForm } from "@/app/sections/BookDemoForm";
 
 export function FinalCTASection() {
     return (
@@ -59,14 +60,16 @@ export function FinalCTASection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button
-                            variant="outline"
-                            className="w-full sm:w-auto text-white hover:bg-white/10 hover:text-white border border-white bg-transparent h-12 px-8 rounded-lg transition-colors cursor-pointer"
-                        >
-                            {finalCTAContent.secondaryCTA}
-                        </Button>
-                    </motion.div>
+                    <BookDemoForm key={finalCTAContent.secondaryCTA}>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                            <Button
+                                variant="outline"
+                                className="w-full sm:w-auto text-white hover:bg-white/10 hover:text-white border border-white bg-transparent h-12 px-8 rounded-lg transition-colors cursor-pointer"
+                            >
+                                {finalCTAContent.secondaryCTA}
+                            </Button>
+                        </motion.div>
+                    </BookDemoForm>
                 </motion.div>
 
                 <motion.div

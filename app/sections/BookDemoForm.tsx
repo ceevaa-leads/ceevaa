@@ -347,7 +347,7 @@ export function BookDemoForm({
                     </div>
 
                     {/* Submit Button */}
-                    <div className="pt-2">
+                    <div className="pt-4">
                         <Button
                             type="submit"
                             disabled={!validateForm() || isSubmitting}

@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { motion } from "motion/react";
 import { featuresContent } from "@/app/content";
-import { BookDemoForm } from "./BookDemoForm";
+import { BookDemoForm } from "@/app/sections/BookDemoForm";
 
 // Icon mapping helper - Add more icons as needed
 const iconMap = {
@@ -96,7 +96,7 @@ export function FeaturesSection() {
                                                 transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
                                                 viewport={{ once: true }}
                                             >
-                                                <CheckCircle className="w-5 h-5 text-slate-600 mr-3" />
+                                                <CheckCircle className="w-5 h-5 text-sky-700 mr-3" />
                                                 <span>{text}</span>
                                             </motion.div>
                                         ))}
@@ -135,14 +135,13 @@ export function FeaturesSection() {
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-0">
                             <BookDemoForm key={featuresContent.bottomCard.cta}>
-                                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
                                     <Button className="bg-white text-slate-900 hover:bg-slate-100 px-6 h-12 rounded-lg cursor-pointer">
                                         {featuresContent.bottomCard.cta}
                                         <ArrowRight className="w-4 h-4 ml-2" />
                                     </Button>
                                 </motion.div>
                             </BookDemoForm>
-
                         </div>
                     </div>
                 </motion.div>

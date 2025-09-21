@@ -38,19 +38,16 @@ export function Footer() {
                         onClick={() =>
                             window.scrollTo({ top: 0, behavior: "smooth" })
                         }
-                        className="inline-flex items-center space-x-2 mb-8 hover:opacity-80 transition-opacity cursor-pointer group"
-                        whileHover={{ scale: 1.05 }}
+                        className="inline-flex items-center space-x-2 mb-8 cursor-pointer group"
                     >
-                        <div className="w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div className="rounded-xl flex items-center justify-center">
                             <motion.img
                                 src={ceeVaaLogo.src}
                                 alt="CeeVaa Logo"
-                                className="w-12 h-12"
-                                whileHover={{ rotate: 360 }}
-                                transition={{ duration: 0.6 }}
+                                className="w-16 h-16"
                             />
                         </div>
-                        <span className="text-2xl text-slate-900 font-semibold">
+                        <span className="text-3xl text-sky-900 font-bold">
                             {footerContent.company.name}
                         </span>
                     </motion.button>
