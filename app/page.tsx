@@ -1,14 +1,15 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { Navigation } from "./components/sections/Navigation";
-import { HeroSection } from "./components/sections/Hero";
-import { FeaturesSection } from "./components/sections/Features";
-import { HowItWorksSection } from "./components/sections/HowItWorks";
-import { WhoWeServeSection } from "./components/sections/WhoWeServe";
-import { ComparisonSection } from "./components/sections/Comparison";
-import { FinalCTASection } from "./components/sections/FinalCTA";
-import { Footer } from "./components/sections/Footer";
+import { Navigation } from "@/app/sections/Navigation";
+import { HeroSection } from "@/app/sections/Hero";
+import { FeaturesSection } from "@/app/sections/Features";
+import { HowItWorksSection } from "@/app/sections/HowItWorks";
+import { WhoWeServeSection } from "@/app/sections/WhoWeServe";
+import { ComparisonSection } from "@/app/sections/Comparison";
+import { FinalCTASection } from "@/app/sections/FinalCTA";
+import { Footer } from "@/app/sections/Footer";
+import { Toaster } from "@/app/components";
 
 import "./globals.css";
 
@@ -58,32 +59,40 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
+    <>
+      <div className="min-h-screen bg-white">
+        <Navigation
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
+
+        <HeroSection />
+
+        <FeaturesSection />
+
+        <HowItWorksSection
+          activeProcessTab={activeProcessTab}
+          tabProgress={tabProgress}
+          handleTabClick={handleTabClick}
+        />
+
+        <WhoWeServeSection
+          activeServiceTab={activeServiceTab}
+          setActiveServiceTab={setActiveServiceTab}
+        />
+
+        <ComparisonSection />
+
+        <FinalCTASection />
+
+        <Footer />
+      </div>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 4000,
+        }}
       />
-
-      <HeroSection />
-
-      <FeaturesSection />
-
-      <HowItWorksSection
-        activeProcessTab={activeProcessTab}
-        tabProgress={tabProgress}
-        handleTabClick={handleTabClick}
-      />
-
-      <WhoWeServeSection
-        activeServiceTab={activeServiceTab}
-        setActiveServiceTab={setActiveServiceTab}
-      />
-
-      <ComparisonSection />
-
-      <FinalCTASection />
-
-      <Footer />
-    </div>
+    </>
   );
 }

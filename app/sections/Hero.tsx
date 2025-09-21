@@ -1,11 +1,11 @@
 'use client'
 
 
-import { Button } from "@/app/components/atoms/Button";
-import { Badge } from "@/app/components/atoms/Badge";
+import { Button, Badge } from "@/app/components";
 import { CheckCircle } from "lucide-react";
-import { heroContent } from "@/app/data/content";
+import { heroContent } from "@/app/content";
 import { motion } from "motion/react";
+import { BookDemoForm } from "./BookDemoForm";
 
 export function HeroSection() {
     return (
@@ -23,7 +23,7 @@ export function HeroSection() {
                 >
                     <Badge
                         variant="secondary"
-                        className="mb-6 md:mb-8 text-orange-700 bg-orange-100 hover:bg-orange-100"
+                        className="mb-6 md:mb-8 text-sky-700 bg-sky-100 hover:bg-sky-100"
                     >
                         {heroContent.badge}
                     </Badge>
@@ -62,19 +62,15 @@ export function HeroSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 1.3 }}
                 >
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white px-8 h-12 rounded-lg transition-all hover:scale-105 cursor-pointer">
-                            {heroContent.primaryCTA}
-                        </Button>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button
-                            variant="outline"
-                            className="w-full sm:w-auto text-slate-600 hover:text-slate-900 h-12 px-8 transition-colors border-slate-300 rounded-lg cursor-pointer"
-                        >
-                            {heroContent.secondaryCTA}
-                        </Button>
-                    </motion.div>
+                    <BookDemoForm key={heroContent.primaryCTA}>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                            <Button className="w-full sm:w-auto bg-sky-700 hover:bg-sky-700 text-white px-8 h-12 rounded-lg transition-all hover:scale-105 cursor-pointer">
+                                {heroContent.primaryCTA}
+                            </Button>
+                        </motion.div>
+                    </BookDemoForm>
+
+
                 </motion.div>
 
                 {/* Trust indicators */}
@@ -92,7 +88,7 @@ export function HeroSection() {
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.5, delay: 1.5 + i * 0.1 }}
                         >
-                            <CheckCircle className="w-4 h-4 text-orange-600 mr-2" />
+                            <CheckCircle className="w-4 h-4 text-sky-700 mr-2" />
                             {text}
                         </motion.div>
                     ))}

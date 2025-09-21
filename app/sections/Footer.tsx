@@ -3,7 +3,7 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { motion } from "motion/react";
 import ceeVaaLogo from "@/app/icon.png";
-import { footerContent } from "@/app/data/content";
+import { footerContent } from "@/app/content";
 
 
 // Icon mapping helper
@@ -74,7 +74,7 @@ export function Footer() {
                                 <motion.a
                                     key={i}
                                     href={social.href}
-                                    className="group w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-500 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all duration-300 shadow-sm hover:shadow-lg hover:scale-110"
+                                    className="group w-12 h-12 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-slate-500 hover:bg-sky-700 hover:text-white hover:border-sky-700 transition-all duration-300 shadow-sm hover:shadow-lg hover:scale-110"
                                     whileHover={{ y: -2 }}
                                     initial={{ scale: 0.8, opacity: 0 }}
                                     whileInView={{ scale: 1, opacity: 1 }}
@@ -89,7 +89,7 @@ export function Footer() {
 
                     {/* Decorative divider */}
                     <motion.div
-                        className="w-24 h-1 bg-gradient-to-r from-orange-600 to-orange-400 rounded-full mx-auto mb-8"
+                        className="w-24 h-1 bg-gradient-to-r from-sky-700 to-sky-400 rounded-full mx-auto mb-8"
                         initial={{ width: 0, opacity: 0 }}
                         whileInView={{ width: "6rem", opacity: 1 }}
                         transition={{ duration: 0.8, delay: 0.4 }}

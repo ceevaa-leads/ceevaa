@@ -7,8 +7,7 @@ export const heroContent = {
     emphasized: "Service SMBs"
   },
   subtitle: "Exclusive, AI-verified leads — delivered straight to your business. No more chasing prospects or competing for shared leads.",
-  primaryCTA: "Get Started for Free",
-  secondaryCTA: "Book a Demo",
+  primaryCTA: "Book a Demo",
   trustIndicators: [
     "No setup fees",
     "Cancel anytime",
@@ -25,17 +24,14 @@ export const navigationContent = {
     // { href: "#comparison", label: "Why Us" },
   ],
   cta: [
-    { type: "primary", label: "Get Started" },
-    { type: "secondary", label: "Book a Demo" }
+    { type: "primary", label: "Book a Demo" },
+    // { type: "secondary", label: "Book a Demo" }
   ]
 };
 
 export const featuresContent = {
   badge: "Platform Features",
-  headline: {
-    main: "More Than Software — Your",
-    emphasized: "Growth Partner"
-  },
+  headline: "More Than Software — Your Growth Partner",
   subtitle: "We handle the complexity of lead generation so you can focus on what you do best.",
   features: [
     {
@@ -72,10 +68,7 @@ export const featuresContent = {
 
 export const howItWorksContent = {
   badge: "How It Works",
-  headline: {
-    main: "Your Path to",
-    emphasized: "Growth"
-  },
+  headline: "Your Path to Growth",
   subtitle: "Four simple steps to transform your lead generation",
   steps: [
     {
@@ -131,10 +124,7 @@ export const howItWorksContent = {
 
 export const whoWeServeContent = {
   badge: "Service Industries",
-  headline: {
-    main: "Who We",
-    emphasized: "Serve"
-  },
+  headline: "Who We Serve",
   subtitle: "Perfect for small business owners who want customers without the marketing headaches",
   services: [
     {
@@ -181,10 +171,7 @@ export const whoWeServeContent = {
 
 export const comparisonContent = {
   badge: "Comparison table",
-  headline: {
-    main: "Why CeeVaa",
-    emphasized: "Wins"
-  },
+  headline: "Why CeeVaa Wins",
   subtitle: "See how we stack up against traditional lead generation methods",
   comparisons: [
     {
@@ -237,18 +224,15 @@ export const comparisonContent = {
 
 export const finalCTAContent = {
   badge: "Ready to grow?",
-  headline: {
-    main: "Stop Chasing Leads.",
-    emphasized: "Start Converting Them."
-  },
-  subtitle: "Join hundreds of service businesses already growing with CeeVaa. Get your first exclusive leads within 48 hours.",
+  headline: "Your next customer is already searching.",
+  subtitle: { main: "Let's make sure they find you — not your competitor.", emphasized: "Join hundreds of successful service pros." },
   features: [
     "No setup fees or contracts",
     "Cancel anytime, no questions asked",
     "First leads delivered in 48 hours"
   ],
-  primaryCTA: "Start Growing Today",
-  secondaryCTA: "Book a Strategy Call"
+  // primaryCTA: "Start Growing Today",
+  secondaryCTA: "Book a Demo"
 };
 
 export const footerContent = {
@@ -258,10 +242,7 @@ export const footerContent = {
       "A powerful, customizable lead generation platform designed to help service teams capture, track, and convert leads with ease. From smart automation to real-time insights.",
   },
   socialLinks: [
-    { name: "Facebook", href: "#", icon: "Facebook" },
-    { name: "Instagram", href: "#", icon: "Instagram" },
     { name: "LinkedIn", href: "#", icon: "Linkedin" },
-    { name: "Twitter", href: "#", icon: "Twitter" },
   ],
   links: {
     product: [

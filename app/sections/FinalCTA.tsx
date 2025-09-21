@@ -1,22 +1,20 @@
 'use client'
 
-
-import * as React from "react";
-import { Button } from "../atoms/Button";
-import { Badge } from "../atoms/Badge";
+import { Button, Badge } from "@/app/components";
 import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
+import { finalCTAContent } from "@/app/content";
 
 export function FinalCTASection() {
     return (
         <motion.section
-            className="py-24 md:py-32 bg-orange-600 text-white relative overflow-hidden"
+            className="py-24 md:py-32 bg-sky-700 text-white relative overflow-hidden"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
         >
-            <div className="absolute inset-0 bg-orange-600"></div>
+            <div className="absolute inset-0 bg-sky-700"></div>
 
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center text-white">
                 <motion.div
@@ -27,9 +25,9 @@ export function FinalCTASection() {
                 >
                     <Badge
                         variant="secondary"
-                        className="mb-6 md:mb-8 text-orange-600 bg-white hover:bg-white"
+                        className="mb-6 md:mb-8 text-sky-700 bg-white hover:bg-white"
                     >
-                        Ready to Get Started?
+                        {finalCTAContent.badge}
                     </Badge>
                 </motion.div>
 
@@ -40,9 +38,9 @@ export function FinalCTASection() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
                 >
-                    Your next customer is already{" "}
-                    <span className=" text-white">searching</span>.
+                    {finalCTAContent.headline}
                 </motion.h2>
+
 
                 <motion.p
                     className="text-lg md:text-xl text-white mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed"
@@ -51,9 +49,7 @@ export function FinalCTASection() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
                 >
-                    Let&apos make sure they find you — not your competitor.
-                    <br />
-                    Join hundreds of successful service pros.
+                    {finalCTAContent.subtitle.main} <br /> {finalCTAContent.subtitle.emphasized}
                 </motion.p>
 
                 <motion.div
@@ -64,16 +60,11 @@ export function FinalCTASection() {
                     viewport={{ once: true }}
                 >
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button className="w-full sm:w-auto bg-white text-slate-900 hover:bg-slate-100 px-8 h-12 rounded-lg transition-all hover:scale-105 cursor-pointer">
-                            Get Started Free
-                        </Button>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Button
                             variant="outline"
                             className="w-full sm:w-auto text-white hover:bg-white/10 hover:text-white border border-white bg-transparent h-12 px-8 rounded-lg transition-colors cursor-pointer"
                         >
-                            Talk to Our Experts
+                            {finalCTAContent.secondaryCTA}
                         </Button>
                     </motion.div>
                 </motion.div>
@@ -85,11 +76,7 @@ export function FinalCTASection() {
                     transition={{ duration: 0.8, delay: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    {[
-                        "Free setup & consultation",
-                        "No long-term contracts",
-                        "Money-back guarantee"
-                    ].map((text, i) => (
+                    {finalCTAContent.features.map((text, i) => (
                         <motion.div
                             key={text}
                             className="flex items-center"

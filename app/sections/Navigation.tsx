@@ -1,11 +1,11 @@
 'use client'
 
-import * as React from "react";
-import { Button } from "@/app/components/atoms/Button";
+import { Button } from "@/app/components";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import ceeVaaLogo from "@/app/icon.png";
-import { navigationContent } from "@/app/data/content";
+import { navigationContent } from "@/app/content";
+import { BookDemoForm } from "./BookDemoForm";
 
 interface NavigationProps {
     mobileMenuOpen: boolean;
@@ -20,7 +20,7 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
                 <div className="flex justify-center items-center">
                     {/* Main Navigation Container - Pill with Logo, Links, and CTAs */}
                     <motion.div
@@ -57,7 +57,7 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
 
                         {/* Center Navigation Links */}
                         <div className="flex items-center space-x-1">
-                            {navigationContent.links.map((link, index) => (
+                            {navigationContent.links.map((link) => (
                                 <motion.a
                                     key={link.href}
                                     href={link.href}
@@ -71,25 +71,26 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
 
                         {/* CTA Buttons */}
                         <div className="flex items-center space-x-1.5 px-1 p-[0px]">
-                            {navigationContent.cta.map((cta, index) => (
-                                <motion.div
-                                    key={cta.label}
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                >
-                                    <Button
-                                        className={
-                                            cta.type === "primary"
-                                                ? "bg-orange-600 hover:bg-orange-700 text-white px-6 h-10 rounded-lg shadow-sm transition-all hover:shadow-md cursor-pointer"
-                                                : cta.type === "secondary"
-                                                    ? "text-slate-600 hover:text-slate-900 px-6 h-10 border-slate-300 rounded-lg cursor-pointer"
-                                                    : "text-slate-600 hover:text-orange-600 px-6 h-10 rounded-lg cursor-pointer" // tertiary style
-                                        }
-                                        variant={cta.type === "primary" ? "default" : cta.type === "secondary" ? "outline" : "ghost"}
+                            {navigationContent.cta.map((cta) => (
+                                <BookDemoForm key={cta.label}>
+                                    <motion.div
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
                                     >
-                                        {cta.label}
-                                    </Button>
-                                </motion.div>
+                                        <Button
+                                            className={
+                                                cta.type === "primary"
+                                                    ? "bg-sky-700 hover:bg-sky-800 text-white px-6 h-10 rounded-lg shadow-sm transition-all hover:shadow-md cursor-pointer"
+                                                    : cta.type === "secondary"
+                                                        ? "text-slate-600 hover:text-slate-900 px-6 h-10 border-slate-300 rounded-lg cursor-pointer"
+                                                        : "text-slate-600 hover:text-sky-700 px-6 h-10 rounded-lg cursor-pointer" // tertiary style
+                                            }
+                                            variant={cta.type === "primary" ? "default" : cta.type === "secondary" ? "outline" : "ghost"}
+                                        >
+                                            {cta.label}
+                                        </Button>
+                                    </motion.div>
+                                </BookDemoForm>
                             ))}
                         </div>
                     </motion.div>
@@ -162,21 +163,22 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
                         ))}
 
                         <div className="pt-4 border-t border-slate-100 mt-4 space-y-2">
-                            {navigationContent.cta.map((cta, index) => (
-                                <Button
-                                    key={cta.label}
-                                    className={
-                                        cta.type === "primary"
-                                            ? "w-full bg-orange-600 hover:bg-orange-700 text-white h-12 rounded-lg flex items-center justify-center shadow-sm px-6 cursor-pointer"
-                                            : cta.type === "secondary"
-                                                ? "w-full justify-center px-6 h-12 text-slate-600 hover:text-slate-900 border-slate-300 rounded-lg cursor-pointer"
-                                                : "w-full justify-center px-6 h-12 text-slate-600 hover:text-orange-600 rounded-lg cursor-pointer" // tertiary style
-                                    }
-                                    variant={cta.type === "primary" ? "default" : cta.type === "secondary" ? "outline" : "ghost"}
-                                >
-                                    {cta.label}
-                                    {cta.type === "secondary" && <ArrowRight className="w-4 h-4 ml-2" />}
-                                </Button>
+                            {navigationContent.cta.map((cta) => (
+                                <BookDemoForm key={cta.label}>
+                                    <Button
+                                        className={
+                                            cta.type === "primary"
+                                                ? "w-full bg-sky-700 hover:bg-sky-800 text-white h-12 rounded-lg flex items-center justify-center shadow-sm px-6 cursor-pointer"
+                                                : cta.type === "secondary"
+                                                    ? "w-full justify-center px-6 h-12 text-slate-600 hover:text-slate-900 border-slate-300 rounded-lg cursor-pointer"
+                                                    : "w-full justify-center px-6 h-12 text-slate-600 hover:text-sky-700 rounded-lg cursor-pointer" // tertiary style
+                                        }
+                                        variant={cta.type === "primary" ? "default" : cta.type === "secondary" ? "outline" : "ghost"}
+                                    >
+                                        {cta.label}
+                                        {cta.type === "secondary" && <ArrowRight className="w-4 h-4 ml-2" />}
+                                    </Button>
+                                </BookDemoForm>
                             ))}
                         </div>
                     </motion.div>
