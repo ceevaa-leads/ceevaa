@@ -323,8 +323,8 @@ export const LandingPage: React.FC = () => {
                 <Building2 size={16} />
                 <span>Ceevaasch Technologies Inc.</span>
               </div>
-              <p>8 The Green, Suite D</p>
-              <p>Dover, DE 19901, USA</p>
+              <p>12603, Southwest Freeway,</p>
+              <p>Suite 555, Stafford, Texas 77477</p>
             </div>
 
             <div className="footer-social">
