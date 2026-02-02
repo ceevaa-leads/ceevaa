@@ -3,11 +3,9 @@ import React, { useEffect } from 'react';
 import { getCalApi } from "@calcom/embed-react";
 import { 
   MapPin, 
-  Mail, 
   Zap, 
   Target, 
   BarChart3, 
-  Users,
   CheckCircle2,
   ArrowRight,
   Sparkles,
