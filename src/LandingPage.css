@@ -1,6 +1,6 @@
 /* CeeVaa Landing Page Styles - Agent-Focused Design */
 
-/* Color Variables - Keeping existing theme */
+/* Color Vskybles - Keeping existing theme */
 :root {
   --navy-deep: #0D1B2A;
   --navy-mid: #1B2D3F;
@@ -16,12 +16,12 @@
   --gradient-accent: linear-gradient(135deg, #4A90D9 0%, #6BA3E0 100%);
   
   /* Agent colors */
-  --aria-color: #4A90D9;
-  --aria-glow: rgba(74, 144, 217, 0.3);
-  --marcus-color: #6BA3E0;
-  --marcus-glow: rgba(107, 163, 224, 0.3);
-  --sophia-color: #8BB8EA;
-  --sophia-glow: rgba(139, 184, 234, 0.3);
+  --sky-color: #4A90D9;
+  --sky-glow: rgba(74, 144, 217, 0.3);
+  --sage-color: #6BA3E0;
+  --sage-glow: rgba(107, 163, 224, 0.3);
+  --nova-color: #8BB8EA;
+  --nova-glow: rgba(139, 184, 234, 0.3);
 }
 
 /* Landing Page Base */
@@ -398,15 +398,15 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
-.agent-aria::before {
+.agent-sky::before {
   background: linear-gradient(90deg, #4A90D9 0%, #6BA3E0 100%);
 }
 
-.agent-marcus::before {
+.agent-sage::before {
   background: linear-gradient(90deg, #6BA3E0 0%, #8BB8EA 100%);
 }
 
-.agent-sophia::before {
+.agent-nova::before {
   background: linear-gradient(90deg, #8BB8EA 0%, #A5C9F0 100%);
 }
 
@@ -427,17 +427,17 @@
   color: var(--white);
 }
 
-.agent-avatar-aria {
+.agent-avatar-sky {
   background: linear-gradient(135deg, #4A90D9 0%, #6BA3E0 100%);
   box-shadow: 0 8px 24px rgba(74, 144, 217, 0.3);
 }
 
-.agent-avatar-marcus {
+.agent-avatar-sage {
   background: linear-gradient(135deg, #6BA3E0 0%, #8BB8EA 100%);
   box-shadow: 0 8px 24px rgba(107, 163, 224, 0.3);
 }
 
-.agent-avatar-sophia {
+.agent-avatar-nova {
   background: linear-gradient(135deg, #8BB8EA 0%, #A5C9F0 100%);
   box-shadow: 0 8px 24px rgba(139, 184, 234, 0.3);
 }
@@ -637,19 +637,19 @@
   margin-bottom: 0.75rem;
 }
 
-.workflow-step-agent-aria {
+.workflow-step-agent-sky {
   background: rgba(74, 144, 217, 0.15);
-  color: var(--aria-color);
+  color: var(--sky-color);
 }
 
-.workflow-step-agent-marcus {
+.workflow-step-agent-sage {
   background: rgba(107, 163, 224, 0.15);
-  color: var(--marcus-color);
+  color: var(--sage-color);
 }
 
-.workflow-step-agent-sophia {
+.workflow-step-agent-nova {
   background: rgba(139, 184, 234, 0.15);
-  color: var(--sophia-color);
+  color: var(--nova-color);
 }
 
 .workflow-step h4 {
@@ -925,17 +925,17 @@
   color: var(--white);
 }
 
-.cta-agent-aria {
+.cta-agent-sky {
   background: linear-gradient(135deg, #4A90D9 0%, #6BA3E0 100%);
   box-shadow: 0 6px 20px rgba(74, 144, 217, 0.3);
 }
 
-.cta-agent-marcus {
+.cta-agent-sage {
   background: linear-gradient(135deg, #6BA3E0 0%, #8BB8EA 100%);
   box-shadow: 0 6px 20px rgba(107, 163, 224, 0.3);
 }
 
-.cta-agent-sophia {
+.cta-agent-nova {
   background: linear-gradient(135deg, #8BB8EA 0%, #A5C9F0 100%);
   box-shadow: 0 6px 20px rgba(139, 184, 234, 0.3);
 }

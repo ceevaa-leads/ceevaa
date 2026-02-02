@@ -84,7 +84,7 @@ export const LandingPage: React.FC = () => {
           </h1>
           
           <p className="hero-subtitle">
-            Meet Aria, Marcus & Sophia — three AI agents that find leads from Google Maps, 
+            Meet Sky, Sage & Nova — three AI agents that find leads from Google Maps, 
             convert them with cold email outreach, and optimize your Google Business Profile for SEO.
           </p>
 
@@ -137,8 +137,8 @@ export const LandingPage: React.FC = () => {
           </div>
 
           <div className="agents-grid agents-grid-three">
-            {/* Aria - Lead Scout Agent */}
-            <div className="agent-card agent-aria">
+            {/* Sky - Lead Scout Agent */}
+            <div className="agent-card agent-sky">
               <div className="agent-avatar-container">
                 <div className="agent-avatar agent-avatar-aria">
                   <Search size={28} />
@@ -150,18 +150,18 @@ export const LandingPage: React.FC = () => {
               </div>
               
               <div className="agent-info">
-                <h3 className="agent-name">Aria</h3>
+                <h3 className="agent-name">Sky</h3>
                 <span className="agent-role">Lead Scout Agent</span>
                 <p className="agent-tagline">Google Maps Lead Finder</p>
               </div>
 
               <p className="agent-description">
-                Aria scours Google Maps 24/7 to find your ideal customers. She identifies local businesses, 
+                Sky scours Google Maps 24/7 to find your ideal customers. She identifies local businesses, 
                 discovers decision-makers, and extracts their contact information for outreach.
               </p>
 
               <div className="agent-capabilities">
-                <h4>What Aria Does</h4>
+                <h4>What Sky Does</h4>
                 <ul>
                   <li>
                     <CheckCircle2 size={16} />
@@ -194,8 +194,8 @@ export const LandingPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Marcus - Outreach Agent */}
-            <div className="agent-card agent-marcus">
+            {/* Sage - Outreach Agent */}
+            <div className="agent-card agent-sage">
               <div className="agent-avatar-container">
                 <div className="agent-avatar agent-avatar-marcus">
                   <Send size={28} />
@@ -207,18 +207,18 @@ export const LandingPage: React.FC = () => {
               </div>
               
               <div className="agent-info">
-                <h3 className="agent-name">Marcus</h3>
+                <h3 className="agent-name">Sage</h3>
                 <span className="agent-role">Outreach Agent</span>
                 <p className="agent-tagline">Cold Email Specialist</p>
               </div>
 
               <p className="agent-description">
-                Marcus takes Aria's leads and crafts personalized cold emails that convert. 
+                Sage takes Sky's leads and crafts personalized cold emails that convert. 
                 He analyzes each business to create compelling messages that get responses.
               </p>
 
               <div className="agent-capabilities">
-                <h4>What Marcus Does</h4>
+                <h4>What Sage Does</h4>
                 <ul>
                   <li>
                     <CheckCircle2 size={16} />
@@ -251,8 +251,8 @@ export const LandingPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Sophia - SEO Agent */}
-            <div className="agent-card agent-sophia">
+            {/* Nova - SEO Agent */}
+            <div className="agent-card agent-nova">
               <div className="agent-avatar-container">
                 <div className="agent-avatar agent-avatar-sophia">
                   <Activity size={28} />
@@ -264,18 +264,18 @@ export const LandingPage: React.FC = () => {
               </div>
               
               <div className="agent-info">
-                <h3 className="agent-name">Sophia</h3>
+                <h3 className="agent-name">Nova</h3>
                 <span className="agent-role">SEO Agent</span>
                 <p className="agent-tagline">Google Business Profile Optimizer</p>
               </div>
 
               <p className="agent-description">
-                Sophia analyzes your Google Business Profile to boost your local visibility. 
+                Nova analyzes your Google Business Profile to boost your local visibility. 
                 She suggests keywords, tracks your rankings, and provides a comprehensive health score.
               </p>
 
               <div className="agent-capabilities">
-                <h4>What Sophia Does</h4>
+                <h4>What Nova Does</h4>
                 <ul>
                   <li>
                     <CheckCircle2 size={16} />
@@ -345,11 +345,11 @@ export const LandingPage: React.FC = () => {
 
               <div className="workflow-step">
                 <div className="workflow-step-number">2</div>
-                <div className="workflow-step-agent workflow-step-agent-aria">
+                <div className="workflow-step-agent workflow-step-agent-sky">
                   <Search size={16} />
-                  <span>Aria</span>
+                  <span>Sky</span>
                 </div>
-                <h4>Aria Finds Leads</h4>
+                <h4>Sky Finds Leads</h4>
                 <p>She scrapes Google Maps and extracts decision-maker contacts.</p>
               </div>
 
@@ -359,11 +359,11 @@ export const LandingPage: React.FC = () => {
 
               <div className="workflow-step">
                 <div className="workflow-step-number">3</div>
-                <div className="workflow-step-agent workflow-step-agent-marcus">
+                <div className="workflow-step-agent workflow-step-agent-sage">
                   <Send size={16} />
-                  <span>Marcus</span>
+                  <span>Sage</span>
                 </div>
-                <h4>Marcus Reaches Out</h4>
+                <h4>Sage Reaches Out</h4>
                 <p>He crafts personalized emails and manages follow-ups.</p>
               </div>
 
@@ -407,11 +407,11 @@ export const LandingPage: React.FC = () => {
 
               <div className="workflow-step">
                 <div className="workflow-step-number">2</div>
-                <div className="workflow-step-agent workflow-step-agent-sophia">
+                <div className="workflow-step-agent workflow-step-agent-nova">
                   <Activity size={16} />
-                  <span>Sophia</span>
+                  <span>Nova</span>
                 </div>
-                <h4>Sophia Analyzes</h4>
+                <h4>Nova Analyzes</h4>
                 <p>She audits your profile and identifies optimization opportunities.</p>
               </div>
 
@@ -479,7 +479,7 @@ export const LandingPage: React.FC = () => {
             <span className="section-tag">CAPABILITIES</span>
             <h2 className="section-title">Everything Your AI Team Can Do</h2>
             <p className="section-subtitle">
-              Aria, Marcus & Sophia come with powerful features built-in
+              Sky, Sage & Nova come with powerful features built-in
             </p>
           </div>
 
@@ -487,19 +487,19 @@ export const LandingPage: React.FC = () => {
             <FeatureCard
               icon={<MapPin />}
               title="Google Maps Scraping"
-              description="Aria automatically searches Google Maps for local businesses matching your ideal customer profile"
+              description="Sky automatically searches Google Maps for local businesses matching your ideal customer profile"
               accent="blue"
             />
             <FeatureCard
               icon={<Brain />}
               title="AI-Personalized Emails"
-              description="Marcus analyzes each business to write personalized cold emails that feel human, not spammy"
+              description="Sage analyzes each business to write personalized cold emails that feel human, not spammy"
               accent="silver"
             />
             <FeatureCard
               icon={<FileSearch />}
               title="GBP Analysis"
-              description="Sophia performs a deep audit of your Google Business Profile to identify improvement areas"
+              description="Nova performs a deep audit of your Google Business Profile to identify improvement areas"
               accent="blue"
             />
             <FeatureCard
@@ -551,9 +551,9 @@ export const LandingPage: React.FC = () => {
               </div>
               
               <ul className="pricing-features">
-                <PricingFeature text="Aria finds 10 businesses/day" />
-                <PricingFeature text="Marcus sends up to 1,500 emails/month" />
-                <PricingFeature text="Sophia's GBP health reports" />
+                <PricingFeature text="Sky finds 10 businesses/day" />
+                <PricingFeature text="Sage sends up to 1,500 emails/month" />
+                <PricingFeature text="Nova's GBP health reports" />
                 <PricingFeature text="Basic keyword suggestions" />
                 <PricingFeature text="Standard email support (48-hour)" />
               </ul>
@@ -577,8 +577,8 @@ export const LandingPage: React.FC = () => {
               </div>
               
               <ul className="pricing-features">
-                <PricingFeature text="Aria finds 30 businesses/day" />
-                <PricingFeature text="Marcus sends up to 4,500 emails/month" />
+                <PricingFeature text="Sky finds 30 businesses/day" />
+                <PricingFeature text="Sage sends up to 4,500 emails/month" />
                 <PricingFeature text="Advanced GBP analytics & tracking" />
                 <PricingFeature text="Full keyword ranking reports" />
                 <PricingFeature text="Customizable email templates" />
@@ -619,18 +619,18 @@ export const LandingPage: React.FC = () => {
         <div className="section-container">
           <div className="cta-content">
             <div className="cta-agents">
-              <div className="cta-agent-avatar cta-agent-aria">
+              <div className="cta-agent-avatar cta-agent-sky">
                 <Search size={20} />
               </div>
-              <div className="cta-agent-avatar cta-agent-marcus">
+              <div className="cta-agent-avatar cta-agent-sage">
                 <Send size={20} />
               </div>
-              <div className="cta-agent-avatar cta-agent-sophia">
+              <div className="cta-agent-avatar cta-agent-nova">
                 <Activity size={20} />
               </div>
             </div>
             <h2>Ready to put your AI agents to work?</h2>
-            <p>Aria, Marcus & Sophia are ready to start growing your business</p>
+            <p>Sky, Sage & Nova are ready to start growing your business</p>
             <button 
               type="button" 
               className="cta-btn"
