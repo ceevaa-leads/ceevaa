@@ -1,4 +1,4 @@
-// CeeVaa Landing Page Component - Agent-Focused Design
+// CeeVaa Landing Page Component - Small Business Focused
 import React, { useEffect } from 'react';
 import { getCalApi } from "@calcom/embed-react";
 import { 
@@ -20,7 +20,20 @@ import {
   Activity,
   Award,
   FileSearch,
-  KeyRound
+  KeyRound,
+  Clock,
+  DollarSign,
+  Heart,
+  Phone,
+  Wrench,
+  Home,
+  Scissors,
+  Truck,
+  Dog,
+  Leaf,
+  Hammer,
+  Paintbrush,
+  Shield
 } from 'lucide-react';
 import './LandingPage.css';
 
@@ -48,8 +61,8 @@ export const LandingPage: React.FC = () => {
             <span className="nav-brand-text">CeeVaa</span>
           </div>
           <div className="nav-links">
-            <a href="#agents">AI Agents</a>
             <a href="#how-it-works">How It Works</a>
+            <a href="#industries">Who It's For</a>
             <a href="#pricing">Pricing</a>
             <a href="https://app.ceevaa.ai/login" className="nav-link-login">Login</a>
             <button 
@@ -58,13 +71,13 @@ export const LandingPage: React.FC = () => {
               data-cal-link="ceevaa/demo"
               data-cal-config='{"layout":"month_view"}'
             >
-              Book a Demo
+              Get Started Free
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Warm, Personal */}
       <section className="hero-section">
         <div className="hero-background">
           <div className="hero-gradient-orb hero-orb-1"></div>
@@ -74,18 +87,19 @@ export const LandingPage: React.FC = () => {
         
         <div className="hero-container">
           <div className="hero-badge">
-            <Bot size={14} />
-            <span>AI-Powered Growth Agents</span>
+            <Sparkles size={14} />
+            <span>Built for Local Service Businesses</span>
           </div>
           
           <h1 className="hero-title">
-            Your AI Team for<br />
-            <span className="hero-title-accent">Local Business Growth</span>
+            Get More Customers<br />
+            <span className="hero-title-accent">While You Focus on Your Work</span>
           </h1>
           
           <p className="hero-subtitle">
-            Meet Sky, Sage & Nova — three AI agents that find leads from Google Maps, 
-            convert them with cold email outreach, and optimize your Google Business Profile for SEO.
+            You're great at what you do — cleaning, repairs, lawn care, or walking dogs. 
+            But finding new customers? That's where we come in. CeeVaa brings customers to you, 
+            so you can spend less time marketing and more time doing what you love.
           </p>
 
           <div className="hero-cta-group">
@@ -95,215 +109,202 @@ export const LandingPage: React.FC = () => {
               data-cal-link="ceevaa/demo"
               data-cal-config='{"layout":"month_view"}'
             >
-              Meet Your AI Team
+              See How It Works
               <ArrowRight size={18} />
             </button>
-            <a href="#agents" className="hero-btn-secondary">
-              See How They Work
+            <a href="#industries" className="hero-btn-secondary">
+              Is This For Me?
             </a>
           </div>
 
-          <div className="hero-trust">
-            <div className="trust-avatars">
-              <div className="trust-avatar">A</div>
-              <div className="trust-avatar">M</div>
-              <div className="trust-avatar">S</div>
-            </div>
-            <p>Trusted by janitorial, HVAC, roofing, landscaping, and other local service businesses</p>
+          <div className="hero-trust-simple">
+            <p>Helping janitorial services, HVAC technicians, dog walkers, landscapers, and more get new customers every day</p>
           </div>
         </div>
       </section>
 
-      {/* Agent Team Introduction */}
-      <section className="team-intro-section">
+      {/* Pain Points Section */}
+      <section className="pain-section">
         <div className="section-container">
-          <div className="team-intro-content">
-            <Sparkles className="team-intro-icon" size={40} />
-            <h2>A Team of AI Agents Working For Your Business Growth</h2>
-            <p>While you focus on delivering great service, our AI agents handle lead generation, outreach, and SEO optimization — all on autopilot.</p>
+          <div className="pain-header">
+            <h2>Sound Familiar?</h2>
+          </div>
+          <div className="pain-grid">
+            <div className="pain-card">
+              <Clock size={32} />
+              <h3>"I don't have time for marketing"</h3>
+              <p>You're busy running your business. Between jobs, invoices, and customers, who has time to figure out ads and emails?</p>
+            </div>
+            <div className="pain-card">
+              <DollarSign size={32} />
+              <h3>"I can't afford fancy marketing"</h3>
+              <p>Big marketing agencies charge thousands. You just need more customers, not a complicated strategy.</p>
+            </div>
+            <div className="pain-card">
+              <Phone size={32} />
+              <h3>"I rely on word-of-mouth"</h3>
+              <p>Referrals are great, but they're unpredictable. Some months are busy, others are too quiet.</p>
+            </div>
+          </div>
+          <div className="pain-solution">
+            <p>We get it. That's exactly why we built CeeVaa — to help small business owners like you get a steady stream of new customers without the hassle.</p>
           </div>
         </div>
       </section>
 
-      {/* Meet Your AI Agents Section */}
-      <section id="agents" className="agents-section">
+      {/* Who It's For Section */}
+      <section id="industries" className="industries-section">
         <div className="section-container">
           <div className="section-header">
-            <span className="section-tag">YOUR AI TEAM</span>
-            <h2 className="section-title">Meet Your AI Agents</h2>
+            <span className="section-tag">WHO IT'S FOR</span>
+            <h2 className="section-title">Built for Hardworking Business Owners</h2>
             <p className="section-subtitle">
-              Three specialized agents working together to grow your local business
+              If you run a local service business and want more customers, CeeVaa is for you
             </p>
           </div>
 
-          <div className="agents-grid agents-grid-three">
-            {/* Sky - Lead Scout Agent */}
-            <div className="agent-card agent-sky">
-              <div className="agent-avatar-container">
-                <div className="agent-avatar agent-avatar-aria">
-                  <Search size={28} />
-                </div>
-                <div className="agent-status">
-                  <span className="status-dot"></span>
-                  Online
-                </div>
-              </div>
-              
-              <div className="agent-info">
-                <h3 className="agent-name">Sky</h3>
-                <span className="agent-role">Lead Scout Agent</span>
-                <p className="agent-tagline">Google Maps Lead Finder</p>
-              </div>
+          <div className="industries-grid">
+            <div className="industry-card">
+              <div className="industry-icon"><Sparkles size={24} /></div>
+              <span>Janitorial & Cleaning</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Wrench size={24} /></div>
+              <span>HVAC & Plumbing</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Dog size={24} /></div>
+              <span>Dog Walking & Pet Care</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Leaf size={24} /></div>
+              <span>Landscaping & Lawn Care</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Home size={24} /></div>
+              <span>Roofing & Contractors</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Paintbrush size={24} /></div>
+              <span>Painting & Decorating</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Hammer size={24} /></div>
+              <span>Handyman Services</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Truck size={24} /></div>
+              <span>Moving & Hauling</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Shield size={24} /></div>
+              <span>Pest Control</span>
+            </div>
+            <div className="industry-card">
+              <div className="industry-icon"><Scissors size={24} /></div>
+              <span>Carpet & Upholstery</span>
+            </div>
+          </div>
 
-              <p className="agent-description">
-                Sky scours Google Maps 24/7 to find your ideal customers. She identifies local businesses, 
-                discovers decision-makers, and extracts their contact information for outreach.
-              </p>
+          <p className="industries-more">And many more local service businesses across the US</p>
+        </div>
+      </section>
 
-              <div className="agent-capabilities">
-                <h4>What Sky Does</h4>
-                <ul>
-                  <li>
-                    <CheckCircle2 size={16} />
-                    <span>Scrapes Google Maps for target businesses</span>
-                  </li>
-                  <li>
-                    <CheckCircle2 size={16} />
-                    <span>Finds owner emails & contact details</span>
-                  </li>
-                  <li>
-                    <CheckCircle2 size={16} />
-                    <span>Filters by industry, location & size</span>
-                  </li>
-                  <li>
-                    <CheckCircle2 size={16} />
-                    <span>Delivers qualified leads daily</span>
-                  </li>
-                </ul>
+      {/* Meet Your Helpers - Simplified Agent Section */}
+      <section id="agents" className="helpers-section">
+        <div className="section-container">
+          <div className="section-header">
+            <span className="section-tag">YOUR HELPERS</span>
+            <h2 className="section-title">Meet Your Marketing Team</h2>
+            <p className="section-subtitle">
+              Think of them as your tireless assistants who work around the clock to bring you new customers
+            </p>
+          </div>
+
+          <div className="helpers-grid">
+            {/* Sky - Lead Finder */}
+            <div className="helper-card">
+              <div className="helper-avatar helper-avatar-sky">
+                <Search size={28} />
               </div>
-
-              <div className="agent-stats">
-                <div className="agent-stat">
-                  <span className="stat-number">10K+</span>
-                  <span className="stat-text">Leads Found Daily</span>
-                </div>
-                <div className="agent-stat">
-                  <span className="stat-number">98%</span>
-                  <span className="stat-text">Data Accuracy</span>
+              <div className="helper-content">
+                <h3>Sky</h3>
+                <span className="helper-role">Finds Potential Customers</span>
+                <p>
+                  Sky searches Google Maps to find local businesses and property managers 
+                  who might need your services. She finds their contact info so you don't have to.
+                </p>
+                <div className="helper-benefits">
+                  <div className="helper-benefit">
+                    <CheckCircle2 size={16} />
+                    <span>Finds businesses in your area</span>
+                  </div>
+                  <div className="helper-benefit">
+                    <CheckCircle2 size={16} />
+                    <span>Gets email addresses for you</span>
+                  </div>
+                  <div className="helper-benefit">
+                    <CheckCircle2 size={16} />
+                    <span>Works 24/7, even while you sleep</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Sage - Outreach Agent */}
-            <div className="agent-card agent-sage">
-              <div className="agent-avatar-container">
-                <div className="agent-avatar agent-avatar-marcus">
-                  <Send size={28} />
-                </div>
-                <div className="agent-status">
-                  <span className="status-dot"></span>
-                  Online
-                </div>
+            {/* Sage - Email Sender */}
+            <div className="helper-card">
+              <div className="helper-avatar helper-avatar-sage">
+                <Send size={28} />
               </div>
-              
-              <div className="agent-info">
-                <h3 className="agent-name">Sage</h3>
-                <span className="agent-role">Outreach Agent</span>
-                <p className="agent-tagline">Cold Email Specialist</p>
-              </div>
-
-              <p className="agent-description">
-                Sage takes Sky's leads and crafts personalized cold emails that convert. 
-                He analyzes each business to create compelling messages that get responses.
-              </p>
-
-              <div className="agent-capabilities">
-                <h4>What Sage Does</h4>
-                <ul>
-                  <li>
+              <div className="helper-content">
+                <h3>Sage</h3>
+                <span className="helper-role">Reaches Out For You</span>
+                <p>
+                  Sage writes friendly, personal emails to potential customers introducing 
+                  your business. No pushy sales talk — just genuine outreach that gets responses.
+                </p>
+                <div className="helper-benefits">
+                  <div className="helper-benefit">
                     <CheckCircle2 size={16} />
-                    <span>AI-writes personalized cold emails</span>
-                  </li>
-                  <li>
+                    <span>Writes emails that sound like you</span>
+                  </div>
+                  <div className="helper-benefit">
                     <CheckCircle2 size={16} />
-                    <span>Automates multi-step campaigns</span>
-                  </li>
-                  <li>
+                    <span>Follows up automatically</span>
+                  </div>
+                  <div className="helper-benefit">
                     <CheckCircle2 size={16} />
-                    <span>Optimizes for open & reply rates</span>
-                  </li>
-                  <li>
-                    <CheckCircle2 size={16} />
-                    <span>Manages follow-ups automatically</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="agent-stats">
-                <div className="agent-stat">
-                  <span className="stat-number">45%</span>
-                  <span className="stat-text">Open Rate</span>
-                </div>
-                <div className="agent-stat">
-                  <span className="stat-number">12%</span>
-                  <span className="stat-text">Reply Rate</span>
+                    <span>Never forgets to send a message</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Nova - SEO Agent */}
-            <div className="agent-card agent-nova">
-              <div className="agent-avatar-container">
-                <div className="agent-avatar agent-avatar-sophia">
-                  <Activity size={28} />
-                </div>
-                <div className="agent-status">
-                  <span className="status-dot"></span>
-                  Online
-                </div>
+            {/* Nova - Google Presence */}
+            <div className="helper-card">
+              <div className="helper-avatar helper-avatar-nova">
+                <Activity size={28} />
               </div>
-              
-              <div className="agent-info">
-                <h3 className="agent-name">Nova</h3>
-                <span className="agent-role">SEO Agent</span>
-                <p className="agent-tagline">Google Business Profile Optimizer</p>
-              </div>
-
-              <p className="agent-description">
-                Nova analyzes your Google Business Profile to boost your local visibility. 
-                She suggests keywords, tracks your rankings, and provides a comprehensive health score.
-              </p>
-
-              <div className="agent-capabilities">
-                <h4>What Nova Does</h4>
-                <ul>
-                  <li>
+              <div className="helper-content">
+                <h3>Nova</h3>
+                <span className="helper-role">Boosts Your Google Presence</span>
+                <p>
+                  Nova helps customers find YOU when they search on Google. She optimizes 
+                  your Google Business Profile so you show up when people search for services like yours.
+                </p>
+                <div className="helper-benefits">
+                  <div className="helper-benefit">
                     <CheckCircle2 size={16} />
-                    <span>Analyzes your Google Business Profile</span>
-                  </li>
-                  <li>
+                    <span>Helps you rank higher on Google</span>
+                  </div>
+                  <div className="helper-benefit">
                     <CheckCircle2 size={16} />
-                    <span>Suggests best SEO keywords</span>
-                  </li>
-                  <li>
+                    <span>Suggests keywords people search for</span>
+                  </div>
+                  <div className="helper-benefit">
                     <CheckCircle2 size={16} />
-                    <span>Ranks you for target keywords</span>
-                  </li>
-                  <li>
-                    <CheckCircle2 size={16} />
-                    <span>Provides GBP health score</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="agent-stats">
-                <div className="agent-stat">
-                  <span className="stat-number">50+</span>
-                  <span className="stat-text">SEO Metrics Tracked</span>
-                </div>
-                <div className="agent-stat">
-                  <span className="stat-number">3x</span>
-                  <span className="stat-text">Avg. Visibility Boost</span>
+                    <span>Shows how healthy your profile is</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -311,304 +312,150 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section id="how-it-works" className="how-it-works-section">
+      {/* How It Works - Simple */}
+      <section id="how-it-works" className="simple-steps-section">
         <div className="section-container">
           <div className="section-header">
             <span className="section-tag">HOW IT WORKS</span>
-            <h2 className="section-title">Your AI Agents in Action</h2>
-            <p className="section-subtitle">Two powerful workflows to grow your business</p>
-          </div>
-
-          {/* Workflow 1: Lead Generation & Outreach */}
-          <div className="workflow-block">
-            <div className="workflow-title">
-              <div className="workflow-title-icon">
-                <Target size={20} />
-              </div>
-              <h3>Lead Generation & Outreach</h3>
-            </div>
-            
-            <div className="workflow-container">
-              <div className="workflow-step">
-                <div className="workflow-step-number">1</div>
-                <div className="workflow-step-icon">
-                  <Target size={24} />
-                </div>
-                <h4>Define Your Target</h4>
-                <p>Tell us your ideal customer — industry, location, and size.</p>
-              </div>
-
-              <div className="workflow-arrow">
-                <ArrowRight size={20} />
-              </div>
-
-              <div className="workflow-step">
-                <div className="workflow-step-number">2</div>
-                <div className="workflow-step-agent workflow-step-agent-sky">
-                  <Search size={16} />
-                  <span>Sky</span>
-                </div>
-                <h4>Sky Finds Leads</h4>
-                <p>She scrapes Google Maps and extracts decision-maker contacts.</p>
-              </div>
-
-              <div className="workflow-arrow">
-                <ArrowRight size={20} />
-              </div>
-
-              <div className="workflow-step">
-                <div className="workflow-step-number">3</div>
-                <div className="workflow-step-agent workflow-step-agent-sage">
-                  <Send size={16} />
-                  <span>Sage</span>
-                </div>
-                <h4>Sage Reaches Out</h4>
-                <p>He crafts personalized emails and manages follow-ups.</p>
-              </div>
-
-              <div className="workflow-arrow">
-                <ArrowRight size={20} />
-              </div>
-
-              <div className="workflow-step">
-                <div className="workflow-step-number">4</div>
-                <div className="workflow-step-icon">
-                  <TrendingUp size={24} />
-                </div>
-                <h4>You Close Deals</h4>
-                <p>Convert interested prospects into paying customers.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Workflow 2: GBP SEO Optimization */}
-          <div className="workflow-block">
-            <div className="workflow-title">
-              <div className="workflow-title-icon">
-                <Activity size={20} />
-              </div>
-              <h3>Google Business Profile SEO</h3>
-            </div>
-            
-            <div className="workflow-container">
-              <div className="workflow-step">
-                <div className="workflow-step-number">1</div>
-                <div className="workflow-step-icon">
-                  <Building2 size={24} />
-                </div>
-                <h4>Connect Your GBP</h4>
-                <p>Link your Google Business Profile for analysis.</p>
-              </div>
-
-              <div className="workflow-arrow">
-                <ArrowRight size={20} />
-              </div>
-
-              <div className="workflow-step">
-                <div className="workflow-step-number">2</div>
-                <div className="workflow-step-agent workflow-step-agent-nova">
-                  <Activity size={16} />
-                  <span>Nova</span>
-                </div>
-                <h4>Nova Analyzes</h4>
-                <p>She audits your profile and identifies optimization opportunities.</p>
-              </div>
-
-              <div className="workflow-arrow">
-                <ArrowRight size={20} />
-              </div>
-
-              <div className="workflow-step">
-                <div className="workflow-step-number">3</div>
-                <div className="workflow-step-icon">
-                  <KeyRound size={24} />
-                </div>
-                <h4>Get Keyword Insights</h4>
-                <p>Discover the best SEO keywords for your business.</p>
-              </div>
-
-              <div className="workflow-arrow">
-                <ArrowRight size={20} />
-              </div>
-
-              <div className="workflow-step">
-                <div className="workflow-step-number">4</div>
-                <div className="workflow-step-icon">
-                  <Award size={24} />
-                </div>
-                <h4>Track & Improve</h4>
-                <p>Monitor rankings and overall GBP health score.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="stats-section">
-        <div className="section-container">
-          <div className="stats-header">
-            <h2>Real Results from Real AI Agents</h2>
-          </div>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-value">10K+</div>
-              <div className="stat-label">Leads Generated Daily</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-value">45%</div>
-              <div className="stat-label">Average Open Rate</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-value">12%</div>
-              <div className="stat-label">Reply Rate</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-value">3x</div>
-              <div className="stat-label">Avg. Visibility Boost</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="features-section">
-        <div className="section-container">
-          <div className="section-header">
-            <span className="section-tag">CAPABILITIES</span>
-            <h2 className="section-title">Everything Your AI Team Can Do</h2>
+            <h2 className="section-title">Simple as 1-2-3</h2>
             <p className="section-subtitle">
-              Sky, Sage & Nova come with powerful features built-in
+              No complicated setup. No tech skills needed. Just tell us about your business and we do the rest.
             </p>
           </div>
 
-          <div className="features-grid">
-            <FeatureCard
-              icon={<MapPin />}
-              title="Google Maps Scraping"
-              description="Sky automatically searches Google Maps for local businesses matching your ideal customer profile"
-              accent="blue"
-            />
-            <FeatureCard
-              icon={<Brain />}
-              title="AI-Personalized Emails"
-              description="Sage analyzes each business to write personalized cold emails that feel human, not spammy"
-              accent="silver"
-            />
-            <FeatureCard
-              icon={<FileSearch />}
-              title="GBP Analysis"
-              description="Nova performs a deep audit of your Google Business Profile to identify improvement areas"
-              accent="blue"
-            />
-            <FeatureCard
-              icon={<KeyRound />}
-              title="Keyword Suggestions"
-              description="Get AI-recommended SEO keywords that will help your business rank higher locally"
-              accent="silver"
-            />
-            <FeatureCard
-              icon={<BarChart3 />}
-              title="Ranking & Analytics"
-              description="Track how you rank for keywords and monitor your GBP health score over time"
-              accent="blue"
-            />
-            <FeatureCard
-              icon={<Zap />}
-              title="Automated Campaigns"
-              description="Set it and forget it — your agents handle everything from discovery to follow-ups"
-              accent="silver"
-            />
+          <div className="simple-steps">
+            <div className="simple-step">
+              <div className="simple-step-number">1</div>
+              <h3>Tell Us About Your Business</h3>
+              <p>What do you do? Where do you work? What's your ideal customer? Just answer a few simple questions.</p>
+            </div>
+            <div className="simple-step-arrow">
+              <ArrowRight size={24} />
+            </div>
+            <div className="simple-step">
+              <div className="simple-step-number">2</div>
+              <h3>We Find & Reach Out</h3>
+              <p>Sky finds potential customers in your area. Sage sends them friendly emails introducing your services.</p>
+            </div>
+            <div className="simple-step-arrow">
+              <ArrowRight size={24} />
+            </div>
+            <div className="simple-step">
+              <div className="simple-step-number">3</div>
+              <h3>You Get New Customers</h3>
+              <p>Interested people reply directly to you. Just answer their questions and book the job!</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Social Proof - Testimonial Style */}
+      <section className="testimonial-section">
+        <div className="section-container">
+          <div className="testimonial-card">
+            <div className="testimonial-quote">"</div>
+            <p className="testimonial-text">
+              I used to spend my Sundays driving around looking for commercial properties to pitch. 
+              Now CeeVaa does that for me. Last month I landed 3 new cleaning contracts just from 
+              emails Sage sent out. It's like having a salesperson who never takes a day off.
+            </p>
+            <div className="testimonial-author">
+              <div className="testimonial-avatar">M</div>
+              <div className="testimonial-info">
+                <span className="testimonial-name">Mike R.</span>
+                <span className="testimonial-business">Commercial Cleaning, Houston TX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="results-section">
+        <div className="section-container">
+          <div className="results-header">
+            <h2>Real Results for Real Businesses</h2>
+          </div>
+          <div className="results-grid">
+            <div className="result-item">
+              <div className="result-value">45%</div>
+              <div className="result-label">of emails get opened</div>
+            </div>
+            <div className="result-item">
+              <div className="result-value">12%</div>
+              <div className="result-label">reply with interest</div>
+            </div>
+            <div className="result-item">
+              <div className="result-value">$0</div>
+              <div className="result-label">to get started</div>
+            </div>
+            <div className="result-item">
+              <div className="result-value">24/7</div>
+              <div className="result-label">working for you</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section - Friendly */}
       <section id="pricing" className="pricing-section">
         <div className="section-container">
           <div className="section-header">
-            <span className="section-tag">PRICING</span>
-            <h2 className="section-title">Choose Your AI Team Plan</h2>
-            <p className="section-subtitle">No long-term commitments. Cancel anytime.</p>
+            <span className="section-tag">SIMPLE PRICING</span>
+            <h2 className="section-title">Affordable Plans for Small Businesses</h2>
+            <p className="section-subtitle">No contracts. Cancel anytime. Start seeing results in days, not months.</p>
           </div>
 
           <div className="pricing-grid">
-            <div className="pricing-card">
-              <div className="pricing-header">
-                <h3 className="pricing-name">Starter</h3>
-                <div className="pricing-agents">
-                  <Bot size={16} />
-                  <span>All 3 AI Agents Included</span>
-                </div>
-                <div className="pricing-price">
-                  <span className="price-currency">$</span>
-                  <span className="price-amount">79</span>
-                  <span className="price-period">/month</span>
-                </div>
-                <p className="pricing-onboarding">+$49 one-time onboarding fee</p>
-                <p className="pricing-description">Perfect for getting started</p>
-              </div>
-              
-              <ul className="pricing-features">
-                <PricingFeature text="Sky finds 10 businesses/day" />
-                <PricingFeature text="Sage sends up to 1,500 emails/month" />
-                <PricingFeature text="Nova's GBP health reports" />
-                <PricingFeature text="Basic keyword suggestions" />
-                <PricingFeature text="Standard email support (48-hour)" />
-              </ul>
-            </div>
-
             <div className="pricing-card pricing-card-featured">
-              <div className="pricing-badge">Most Popular</div>
               <div className="pricing-header">
-                <h3 className="pricing-name">Growth</h3>
-                <div className="pricing-agents">
-                  <Bot size={16} />
-                  <span>All 3 AI Agents Included</span>
-                </div>
-                <div className="pricing-price">
-                  <span className="price-currency">$</span>
-                  <span className="price-amount">129</span>
-                  <span className="price-period">/month</span>
-                </div>
-                <p className="pricing-onboarding">+$49 one-time onboarding fee</p>
-                <p className="pricing-description">For businesses ready to scale</p>
-              </div>
-              
-              <ul className="pricing-features">
-                <PricingFeature text="Sky finds 30 businesses/day" />
-                <PricingFeature text="Sage sends up to 4,500 emails/month" />
-                <PricingFeature text="Advanced GBP analytics & tracking" />
-                <PricingFeature text="Full keyword ranking reports" />
-                <PricingFeature text="Customizable email templates" />
-                <PricingFeature text="Priority support (24-hour response)" />
-              </ul>
-            </div>
-
-            <div className="pricing-card">
-              <div className="pricing-header">
-                <h3 className="pricing-name">Managed Growth</h3>
-                <div className="pricing-agents">
-                  <Star size={16} />
-                  <span>AI Agents + Human Expert</span>
-                </div>
+                <h3 className="pricing-name">Done-For-You</h3>
+                <p className="pricing-tagline">We handle everything for you</p>
                 <div className="pricing-price">
                   <span className="price-currency">$</span>
                   <span className="price-amount">499</span>
                   <span className="price-period">/month</span>
                 </div>
-                <p className="pricing-onboarding">+$49 per qualified walkthrough</p>
-                <p className="pricing-description">Fully managed, hands-off solution</p>
+                <p className="pricing-onboarding">+$49 per booked appointment</p>
               </div>
               
               <ul className="pricing-features">
-                <PricingFeature text="Dedicated Sales Rep + All AI Agents" />
-                <PricingFeature text="From emails to calls to walkthroughs" />
-                <PricingFeature text="Full GBP optimization service" />
+                <PricingFeature text="Find 30 potential customers daily" />
+                <PricingFeature text="Send up to 4,500 emails/month" />
+                <PricingFeature text="Full Google SEO optimization" />
                 <PricingFeature text="Dedicated account manager" />
-                <PricingFeature text="Full onboarding and training" />
+                <PricingFeature text="We manage all outreach for you" />
+                <PricingFeature text="Phone follow-ups on leads" />
+                <PricingFeature text="Monthly strategy calls" />
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="section-container">
+          <div className="section-header">
+            <h2 className="section-title">Common Questions</h2>
+          </div>
+          
+          <div className="faq-grid">
+            <div className="faq-item">
+              <h4>Do I need to be tech-savvy?</h4>
+              <p>Not at all! If you can use email and text, you can use CeeVaa. We set everything up for you.</p>
+            </div>
+            <div className="faq-item">
+              <h4>How fast will I see results?</h4>
+              <p>Most customers start getting responses within the first week. Results vary, but we've seen customers book jobs within days of starting.</p>
+            </div>
+            <div className="faq-item">
+              <h4>Will emails seem spammy?</h4>
+              <p>Never. Sage writes personalized, friendly emails that sound like they're coming from a real person (because they're based on you!).</p>
+            </div>
+            <div className="faq-item">
+              <h4>Can I cancel anytime?</h4>
+              <p>Yes! No contracts, no commitments. Cancel with one click if it's not working for you.</p>
             </div>
           </div>
         </div>
@@ -618,19 +465,9 @@ export const LandingPage: React.FC = () => {
       <section className="cta-section">
         <div className="section-container">
           <div className="cta-content">
-            <div className="cta-agents">
-              <div className="cta-agent-avatar cta-agent-sky">
-                <Search size={20} />
-              </div>
-              <div className="cta-agent-avatar cta-agent-sage">
-                <Send size={20} />
-              </div>
-              <div className="cta-agent-avatar cta-agent-nova">
-                <Activity size={20} />
-              </div>
-            </div>
-            <h2>Ready to put your AI agents to work?</h2>
-            <p>Sky, Sage & Nova are ready to start growing your business</p>
+            <Heart className="cta-icon" size={40} />
+            <h2>Ready to Get More Customers?</h2>
+            <p>Join hundreds of hardworking business owners who are growing with CeeVaa</p>
             <button 
               type="button" 
               className="cta-btn"
@@ -638,9 +475,10 @@ export const LandingPage: React.FC = () => {
               data-cal-link="ceevaa/demo"
               data-cal-config='{"layout":"month_view"}'
             >
-              Book Your Demo
+              Let's Talk — It's Free
               <ArrowRight size={20} />
             </button>
+            <p className="cta-subtext">No credit card required. Just a friendly conversation.</p>
           </div>
         </div>
       </section>
@@ -654,12 +492,12 @@ export const LandingPage: React.FC = () => {
                 <img src="/logo.png" alt="CeeVaa" className="footer-logo" />
                 <span className="footer-brand-text">CeeVaa</span>
               </div>
-              <p className="footer-tagline">Your AI team for local business growth</p>
+              <p className="footer-tagline">Helping local businesses get more customers</p>
             </div>
 
             <div className="footer-links">
-              <a href="#agents">AI Agents</a>
               <a href="#how-it-works">How It Works</a>
+              <a href="#industries">Who It's For</a>
               <a href="#pricing">Pricing</a>
               <a href="https://app.ceevaa.ai/login">Login</a>
             </div>
@@ -691,23 +529,6 @@ export const LandingPage: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
-};
-
-interface FeatureCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  accent: 'blue' | 'silver';
-}
-
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, accent }) => {
-  return (
-    <div className={`feature-card feature-card-${accent}`}>
-      <div className="feature-icon">{icon}</div>
-      <h3 className="feature-title">{title}</h3>
-      <p className="feature-description">{description}</p>
     </div>
   );
 };
